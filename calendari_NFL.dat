@@ -1,0 +1,9 @@
+
+param n := 6;
+param r := 2;
+param s := 3;
+/*
+param n := 10;
+param r := 3;
+param s := 4;
+*/

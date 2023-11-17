@@ -1,0 +1,22 @@
+# Borrar los anterior comandos en AMPL
+reset;
+
+# Cargar el modelo
+model /home/bernat/Desktop/Practica-2-PM/calendari_NFL.mod;
+
+# Cargar los datos
+data /home/bernat/Desktop/Practica-2-PM/calendari_NFL.dat;
+
+# Indicadión a ampl de que se quiere utilizar como solver: CPLEX
+option solver cplex;
+
+# Resolver
+solve;
+
+# Mostrar los resultados
+option display_1col infinity;
+option omit_zero_rows 1;
+display total;
+display {k in Jornades}: {(k,i,j) in Posibles_partits} Calendari[k,i,j];
+
+# Ejecutar Ctrl+R
