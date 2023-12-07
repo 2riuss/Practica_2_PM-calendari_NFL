@@ -16,7 +16,7 @@ solve;
 # Mostrar los resultados
 option display_1col infinity;
 option omit_zero_rows 1;
-display total;
-display {k in Jornades}: {(k,i,j) in Posibles_partits} Calendari[k,i,j];
+display funcio_objectiu;
+display {k in Jornades}: {(i,j,k) in Partits_Jornades} Calendari_Optim[i,j,k];
 
 # Ejecutar Ctrl+R
